@@ -1,19 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 5000
+const http = require('http');
 
+const hostname = 'http://yaac.ml/';
+const port = 5000;
 
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World!\n');
+});
 
-
-
-app.get('/', (req, res) => {
-
-res.send('PRUEBA NODE')
-
-
-})
-
-app.listen(port, () => {
-  console.log(`Servidor corriendo en el puerto ${port}`)
-})
-
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
