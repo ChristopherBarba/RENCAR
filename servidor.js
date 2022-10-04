@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = 'http://yaac.ml/';
+const hostname = 'localhost';
 const port = 5000;
 
 const server = http.createServer((req, res) => {
