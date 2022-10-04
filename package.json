@@ -6,10 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
+  "hompage": "http://yaac.ml/",
   "author": "CBC",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.20"
   }
+  
 }
