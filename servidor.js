@@ -12,14 +12,15 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   //res.end('Hello World!\n');
   //res.sendFile(path.resolve(__dirname,'index.html'))
+  app.get('/', (req, res) => {
+
+    res.sendFile(path.resolve(__dirname,'index.html'))
+    //res.send(z)
+    
+    })
 });
 
-app.get('/', (req, res) => {
 
-res.sendFile(path.resolve(__dirname,'index.html'))
-//res.send(z)
-
-})
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
