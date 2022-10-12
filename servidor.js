@@ -8,12 +8,6 @@ const fs = require('fs').promises;
 const hostname = 'localhost';
 const port = 443;
 
-//4 -seteamos el directorio de assets
-//app.use('/resources',express.static('public'));
-//app.use('/resources', express.static(__dirname + '/public'));
-app.use(express.static('css'))
-//5 - Establecemos el motor de plantillas
-app.set('view engine','ejs');
 
 
 const server = http.createServer((req, res) => {
@@ -45,12 +39,22 @@ server.listen(port, hostname, () => {
 var express = require('express');
 var app = express();
 
-const hostname = '74.208.159.121';
+//const hostname = '74.208.159.121';
+const hostname = 'localhost';
 const port = 443;
 
-app.get('/', function(req, res) {
-  res.send('Hola Mundo puñe!');
+
+//seteamos el directorio de assets
+app.use('/resources',express.static('public'));
+app.use('/resources', express.static(__dirname + '/public'));
+
+//5 - Establecemos el motor de plantillas
+app.set('view engine','ejs');
+
+app.get('/', function(req, res){
+  res.render('index');
 });
+
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
