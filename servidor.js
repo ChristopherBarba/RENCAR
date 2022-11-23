@@ -3,11 +3,11 @@ var express = require('express');
 var app = express();
 
 //Servidor
-const hostname = '74.208.159.121';
-const port = 443;
+//const hostname = '74.208.159.121';
+//const port = 443;
 //Local
-//const hostname = 'localhost';
-//const port = 5001;
+const hostname = 'localhost';
+const port = 5001;
 
 
 //seteamos el directorio de assets
